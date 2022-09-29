@@ -1,0 +1,50 @@
+﻿create table autos
+(
+	id_auto int identity (1,1) primary key not null,
+	marca varchar (200) not null,
+	modelo varchar (200) not null,
+	anio int not null,
+	patente varchar (200) unique not null,
+	constraint ch_anio check (anio>=2005),
+)
+
+create table datospersonales
+(
+	id_datospersonales int identity (1,1) primary key not null,
+	nombre varchar (40) not null,
+	apellido varchar (40) not null,
+	email varchar (200) not null,
+	telefono varchar (200) not null,
+	DNI varchar (200) unique not null,
+)
+
+create table clientes
+(
+	id_cliente int identity (1,1) primary key not null,
+	id_datospersonales int not null,
+	constraint fk_clientes_datospersonales foreign key (id_datospersonales) references datospersonales (id_datospersonales)
+)
+
+create table tiporegistros
+(
+	id_tipo int identity (1,1) primary key not null,
+	tipo varchar (200) unique not null,
+)
+
+create table registros 
+(
+	id_registro int identity (1,1) primary key not null,
+	id_tipoderegistro int not null,	
+	constraint fk_registros_tiporegistros foreign key (id_registro) references tiporegistros (id_tipo),
+)
+
+create table empleados
+(
+	id_empleados int identity (1,1) primary key not null,
+	id_auto int not null,
+	id_datospersonales int not null,	
+	id_registro int not null,
+	constraint fk_registros_auto foreign key (id_auto) references autos (id_auto),
+	constraint fk_registros_datospersonales foreign key (id_datospersonales) references datospersonales (id_datospersonales) on delete cascade,
+	constraint fk_registros_registro foreign key (id_registro) references registros (id_registro),
+)
