@@ -8,13 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vehiculos
+namespace Vehiculos.Vistas
 {
-    public partial class FormLogin : Form
+    public partial class FormListarClientes : Form
     {
-        public FormLogin()
+        public FormListarClientes()
         {
             InitializeComponent();
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Close();
         }
     }
 }
