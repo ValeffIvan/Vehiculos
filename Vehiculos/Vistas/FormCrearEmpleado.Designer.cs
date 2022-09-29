@@ -236,8 +236,9 @@
             this.btn_Cerrar.Name = "btn_Cerrar";
             this.btn_Cerrar.Size = new System.Drawing.Size(138, 70);
             this.btn_Cerrar.TabIndex = 10;
-            this.btn_Cerrar.Text = "button1";
+            this.btn_Cerrar.Text = "Cerrar";
             this.btn_Cerrar.UseVisualStyleBackColor = true;
+            this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
             // 
             // btn_CrearEmpleado
             // 
@@ -245,7 +246,7 @@
             this.btn_CrearEmpleado.Name = "btn_CrearEmpleado";
             this.btn_CrearEmpleado.Size = new System.Drawing.Size(158, 82);
             this.btn_CrearEmpleado.TabIndex = 11;
-            this.btn_CrearEmpleado.Text = "button2";
+            this.btn_CrearEmpleado.Text = "Agregar";
             this.btn_CrearEmpleado.UseVisualStyleBackColor = true;
             // 
             // FormCrearEmpleado
