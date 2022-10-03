@@ -34,8 +34,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_DNI = new System.Windows.Forms.TextBox();
-            this.txt_Telefono = new System.Windows.Forms.TextBox();
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.txt_Apellido = new System.Windows.Forms.TextBox();
             this.txt_Nombre = new System.Windows.Forms.TextBox();
@@ -45,24 +43,26 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_patente = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.xt_Modelo = new System.Windows.Forms.TextBox();
+            this.txt_Modelo = new System.Windows.Forms.TextBox();
             this.txt_Marca = new System.Windows.Forms.TextBox();
             this.btn_Cerrar = new System.Windows.Forms.Button();
             this.btn_CrearEmpleado = new System.Windows.Forms.Button();
+            this.mkbox_DNI = new System.Windows.Forms.MaskedTextBox();
+            this.mkbox_Telefono = new System.Windows.Forms.MaskedTextBox();
+            this.mkbox_anio = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.mkbox_Telefono);
+            this.panel1.Controls.Add(this.mkbox_DNI);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txt_DNI);
-            this.panel1.Controls.Add(this.txt_Telefono);
             this.panel1.Controls.Add(this.txt_Email);
             this.panel1.Controls.Add(this.txt_Apellido);
             this.panel1.Controls.Add(this.txt_Nombre);
@@ -116,20 +116,6 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Nombre";
             // 
-            // txt_DNI
-            // 
-            this.txt_DNI.Location = new System.Drawing.Point(30, 236);
-            this.txt_DNI.Name = "txt_DNI";
-            this.txt_DNI.Size = new System.Drawing.Size(138, 20);
-            this.txt_DNI.TabIndex = 5;
-            // 
-            // txt_Telefono
-            // 
-            this.txt_Telefono.Location = new System.Drawing.Point(30, 188);
-            this.txt_Telefono.Name = "txt_Telefono";
-            this.txt_Telefono.Size = new System.Drawing.Size(138, 20);
-            this.txt_Telefono.TabIndex = 4;
-            // 
             // txt_Email
             // 
             this.txt_Email.Location = new System.Drawing.Point(30, 141);
@@ -153,13 +139,13 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.mkbox_anio);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.txt_anio);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.txt_patente);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.xt_Modelo);
+            this.panel2.Controls.Add(this.txt_Modelo);
             this.panel2.Controls.Add(this.txt_Marca);
             this.panel2.Location = new System.Drawing.Point(272, 12);
             this.panel2.Name = "panel2";
@@ -209,19 +195,12 @@
             this.txt_patente.Size = new System.Drawing.Size(138, 20);
             this.txt_patente.TabIndex = 9;
             // 
-            // textBox3
+            // txt_Modelo
             // 
-            this.textBox3.Location = new System.Drawing.Point(35, 158);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(138, 20);
-            this.textBox3.TabIndex = 8;
-            // 
-            // xt_Modelo
-            // 
-            this.xt_Modelo.Location = new System.Drawing.Point(35, 109);
-            this.xt_Modelo.Name = "xt_Modelo";
-            this.xt_Modelo.Size = new System.Drawing.Size(138, 20);
-            this.xt_Modelo.TabIndex = 7;
+            this.txt_Modelo.Location = new System.Drawing.Point(35, 109);
+            this.txt_Modelo.Name = "txt_Modelo";
+            this.txt_Modelo.Size = new System.Drawing.Size(138, 20);
+            this.txt_Modelo.TabIndex = 7;
             // 
             // txt_Marca
             // 
@@ -248,6 +227,36 @@
             this.btn_CrearEmpleado.TabIndex = 11;
             this.btn_CrearEmpleado.Text = "Agregar";
             this.btn_CrearEmpleado.UseVisualStyleBackColor = true;
+            this.btn_CrearEmpleado.Click += new System.EventHandler(this.btn_CrearEmpleado_Click);
+            // 
+            // mkbox_DNI
+            // 
+            this.mkbox_DNI.Location = new System.Drawing.Point(30, 240);
+            this.mkbox_DNI.Mask = "99999999";
+            this.mkbox_DNI.Name = "mkbox_DNI";
+            this.mkbox_DNI.Size = new System.Drawing.Size(138, 20);
+            this.mkbox_DNI.TabIndex = 20;
+            this.mkbox_DNI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mkbox_DNI.ValidatingType = typeof(int);
+            // 
+            // mkbox_Telefono
+            // 
+            this.mkbox_Telefono.Location = new System.Drawing.Point(30, 188);
+            this.mkbox_Telefono.Mask = "(999)000-0000";
+            this.mkbox_Telefono.Name = "mkbox_Telefono";
+            this.mkbox_Telefono.Size = new System.Drawing.Size(138, 20);
+            this.mkbox_Telefono.TabIndex = 21;
+            this.mkbox_Telefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // mkbox_anio
+            // 
+            this.mkbox_anio.Location = new System.Drawing.Point(35, 158);
+            this.mkbox_anio.Mask = "00/00/0000";
+            this.mkbox_anio.Name = "mkbox_anio";
+            this.mkbox_anio.Size = new System.Drawing.Size(138, 20);
+            this.mkbox_anio.TabIndex = 22;
+            this.mkbox_anio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mkbox_anio.ValidatingType = typeof(System.DateTime);
             // 
             // FormCrearEmpleado
             // 
@@ -275,8 +284,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_DNI;
-        private System.Windows.Forms.TextBox txt_Telefono;
         private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.TextBox txt_Apellido;
         private System.Windows.Forms.TextBox txt_Nombre;
@@ -286,10 +293,12 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_patente;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox xt_Modelo;
+        private System.Windows.Forms.TextBox txt_Modelo;
         private System.Windows.Forms.TextBox txt_Marca;
         private System.Windows.Forms.Button btn_Cerrar;
         private System.Windows.Forms.Button btn_CrearEmpleado;
+        private System.Windows.Forms.MaskedTextBox mkbox_Telefono;
+        private System.Windows.Forms.MaskedTextBox mkbox_DNI;
+        private System.Windows.Forms.MaskedTextBox mkbox_anio;
     }
 }
