@@ -184,16 +184,15 @@
     <Compile Include="Conexion\DataConexion.cs" />
     <Compile Include="Control\ControlAutos.cs" />
     <Compile Include="Control\ControlClientes.cs" />
+    <Compile Include="Control\ControlCorroborar.cs" />
     <Compile Include="Control\ControlRegistros.cs" />
     <Compile Include="Control\ControlTipoRegistros.cs" />
     <Compile Include="Control\ControlDatosPersonales.cs" />
     <Compile Include="Control\ControlEmpleados.cs" />
     <Compile Include="Data\DataAutos.cs" />
     <Compile Include="Data\DataClientes.cs" />
-    <Compile Include="Data\DataDatosPersonales.cs" />
     <Compile Include="Data\DataEmpleados.cs" />
     <Compile Include="Data\DataRegistros.cs" />
-    <Compile Include="Data\DataTipoRegistros.cs" />
     <Compile Include="Modelo\Auto.cs" />
     <Compile Include="Vistas\FormCrearEmpleado.cs">
       <SubType>Form</SubType>
