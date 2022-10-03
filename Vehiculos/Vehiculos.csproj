@@ -195,11 +195,35 @@
     <Compile Include="Data\DataRegistros.cs" />
     <Compile Include="Data\DataTipoRegistros.cs" />
     <Compile Include="Modelo\Auto.cs" />
-    <Compile Include="Vistas\FormLogin.cs">
+    <Compile Include="Vistas\FormCrearEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <Compile Include="Vistas\FormCrearEmpleado.Designer.cs">
+      <DependentUpon>FormCrearEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormCrearCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormCrearCliente.Designer.cs">
+      <DependentUpon>FormCrearCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormListarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormListarClientes.Designer.cs">
+      <DependentUpon>FormListarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormListarEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormListarEmpleados.Designer.cs">
+      <DependentUpon>FormListarEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Cliente.cs" />
     <Compile Include="Modelo\DatosPersonales.cs" />
@@ -217,6 +241,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vistas\FormCrearCliente.resx">
+      <DependentUpon>FormCrearCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormCrearEmpleado.resx">
+      <DependentUpon>FormCrearEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormListarClientes.resx">
+      <DependentUpon>FormListarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormListarEmpleados.resx">
+      <DependentUpon>FormListarEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

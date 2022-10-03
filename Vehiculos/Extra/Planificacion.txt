@@ -1,1 +1,5 @@
-﻿
+﻿Menu que diga 
+-crear cliente
+-crear empleado
+-listar clientes
+-listar empleados
