@@ -8,5 +8,9 @@ namespace Vehiculos.Control
 {
     internal class ControlAutos
     {
+        public Auto CrearAuto (string marca, string modelo, int anio, string patente)
+        {
+            return new Auto(marca, modelo, anio, patente);
+        }
     }
 }

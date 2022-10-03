@@ -11,5 +11,6 @@ namespace Vehiculos.Modelo
         public int id { get; set; }
         public TipoRegistro tipoRegistro { get; set; }
         public DateTime fechaVencimiento { get; set; }
+
     }
 }

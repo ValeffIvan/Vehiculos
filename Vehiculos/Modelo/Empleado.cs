@@ -12,5 +12,12 @@ namespace Vehiculos.Modelo
         public DatosPersonales datosPersonales { get; set; }
         public Auto auto { get; set; }
         public Registro registro { get; set; }
+
+        public Empleado (DatosPersonales datosPersonales, Auto auto,Registro registro)
+        { 
+            this.datosPersonales = datosPersonales;
+            this.auto = auto;
+            this.registro = registro;
+        }
     }
 }

@@ -20,6 +20,8 @@ namespace Vehiculos.Control
             }
             else
             {
+                DatosPersonales datosPersonales = new DatosPersonales(nombre, apellido, email, telefono, DNI);
+                Auto auto = new Auto(marca, modelo, Convert.ToInt32(anio), patente);
                 Empleado empleado = new Empleado();
             }
         }

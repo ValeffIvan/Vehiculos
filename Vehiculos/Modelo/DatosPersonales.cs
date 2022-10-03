@@ -14,5 +14,14 @@ namespace Vehiculos.Modelo
         public string email { get; set; }
         public string telefono { get; set; }
         public string dni { get; set; }
+
+        public DatosPersonales (string nombre,string apellido, string email, string telefono, string dni)
+        {
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.email = email;
+            this.telefono = telefono;
+            this.dni = dni;
+        }
     }
 }
